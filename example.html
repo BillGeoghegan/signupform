@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Heartnate Example Form</title>
+    <link rel="stylesheet" href="exampleStyles.css" />
+  </head>
+  <body>
+    <form
+      name="Example form"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/success.html"
+    >
+      <p class="hidden">
+        <label>Caught ya<input name="bot-field" /></label>
+      </p>
+      <div id="fields">
+        <div class="stacked">
+          Email Specific Text Input
+          <label for="email">
+            <input id="email" type="email" name="email" placeholder="Email" />
+          </label>
+          Standard Drop Down List
+          <label for="role[]">
+            <select name="role[]">
+              <option value="leader">Leader</option>
+              <option value="follower">Follower</option>
+            </select>
+          </label>
+          Multiple-Select List
+          <label for="color[]">
+            <select name="color[]" multiple>
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+              <option value="pink">Pink</option>
+              <option value="yellow">Yellow</option>
+            </select>
+          </label>
+          Full Text Box
+          <label for="message">
+            <textarea
+              name="message"
+              rows="10"
+              cols="30"
+              placeholder="Enter message"
+            ></textarea>
+          </label>
+          <label for="upload">
+            <input id="upload" type="file" name="upload" />
+          </label>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
