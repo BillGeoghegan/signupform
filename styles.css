@@ -1,4 +1,4 @@
-* {
+#fields * {
   box-sizing: border-box;
   transition: 0.25s ease-in-out;
 }
@@ -86,4 +86,17 @@ html {
 #fields button:focus {
   background: var(--button-hover-color);
   outline: none;
+}
+.success {
+  width: calc(100% - 42px);
+  max-width: 500px;
+  min-width: 260px;
+  height: 58px;
+  margin: 24px;
+  background: var(--button-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }

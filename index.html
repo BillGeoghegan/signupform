@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <form method="POST" data-netlify="true">
+    <form method="POST" data-netlify="true" action="/success.html">
       <div id="fields">
         <label for="field">
-          <input id="field" type="text" />
+          <input id="field" type="email" name="email" />
           <span class="text">Sign up to hear more</span>
         </label>
         <button type="submit">Send</button>
@@ -17,9 +17,7 @@
     <script>
       const input = document.getElementById("field");
       input.addEventListener("blur", () => {
-        console.log("blur");
         const inputContent = input.value;
-        console.log(inputContent);
         if (inputContent != "") {
           input.classList.add("complete");
         } else {
