@@ -5,7 +5,15 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <form method="POST" data-netlify="true" action="/success.html">
+    <form
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/success.html"
+    >
+      <p class="hidden">
+        <label>Caught ya<input name="bot-field" /></label>
+      </p>
       <div id="fields">
         <label for="field">
           <input id="field" type="email" name="email" />

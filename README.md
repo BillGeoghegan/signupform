@@ -10,3 +10,5 @@
 
 1. Follow this guide (it's not that short, but its super simple)
    https://docs.netlify.com/forms/setup/
+
+That's it!
