@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Heartnate Signup Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form method="POST" data-netlify="true">
+      <div id="fields">
+        <label for="field">
+          <input id="field" type="text" />
+          <span class="text">Sign up to hear more</span>
+        </label>
+        <button type="submit">Send</button>
+      </div>
+    </form>
+    <script>
+      const input = document.getElementById("field");
+      input.addEventListener("blur", () => {
+        console.log("blur");
+        const inputContent = input.value;
+        console.log(inputContent);
+        if (inputContent != "") {
+          input.classList.add("complete");
+        } else {
+          input.classList.remove("complete");
+        }
+      });
+    </script>
+  </body>
+</html>

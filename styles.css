@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  transition: 0.25s ease-in-out;
+}
+
+html {
+  height: 100%;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 200;
+  width: 100%;
+  --border-radius: 10px;
+  --button-color: #cc5854;
+  --button-hover-color: #f78986;
+  --text-background: #d8e2ea;
+}
+
+#fields {
+  width: calc(100% - 42px);
+  max-width: 500px;
+  min-width: 260px;
+  margin: 24px;
+  display: flex;
+}
+#fields label {
+  display: block;
+  width: 100%;
+  height: 58px;
+  position: relative;
+  overflow: visible;
+}
+#fields label input {
+  display: block;
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  border: none;
+  outline: none;
+  background: var(--text-background);
+  padding: 20px;
+  margin: 0;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 200;
+  width: 100%;
+  height: 58px;
+}
+#fields label input:focus {
+  background: #ededed;
+}
+#fields label input:focus ~ .text,
+#fields label input.complete:focus ~ .text {
+  color: var(--button-color);
+}
+#fields label input.complete ~ .text {
+  color: #a8b0b6;
+}
+#fields label input#field:focus ~ .text,
+#fields label input#field.complete ~ .text {
+  top: -45px;
+  left: -20px;
+  font-size: 14px;
+}
+#fields label .text {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 2;
+  padding: 20px;
+}
+#fields button {
+  background: var(--button-color);
+  border: none;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  padding: 0 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.9rem;
+}
+#fields button:hover,
+#fields button:focus {
+  background: var(--button-hover-color);
+  outline: none;
+}
